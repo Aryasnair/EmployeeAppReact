@@ -19,7 +19,7 @@ function verifytoken(req, res, next) {
       let payload = jwt.verify(token, "employeeApp");
       if (!payload) throw "Unauthorized access";
       next();
-      //if there is no issues in varify token then move on to next req
+      
     }
   } catch (error) {
     console.log(error);
